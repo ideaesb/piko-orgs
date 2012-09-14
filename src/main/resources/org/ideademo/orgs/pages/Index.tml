@@ -6,7 +6,7 @@
     <ul id="nav">
      <li><a href="../index.php"><span>Home</span></a></li>
      <li><a href="/daps" title="daps"><span>Data &amp; Products</span></a></li>
-     <li><a href="/paws" title="paws"><span>Projects &amp; Activities</span></a></li>
+     <li><a href="/pawz" title="paws"><span>Projects &amp; Activities</span></a></li>
      <li><a href="/asmts" title="assesments"><span>Assessments</span></a></li>
      <li id="nav-1"><t:pagelink page="prop:componentResources.pageName"><u>Partners &amp; Programs</u></t:pagelink></li>
     </ul>
