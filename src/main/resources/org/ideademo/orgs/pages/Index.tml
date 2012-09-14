@@ -1,0 +1,108 @@
+<html t:type="layout" title="partners and programs"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+ 
+<body>
+    <ul id="nav">
+     <li><a href="../index.php"><span>Home</span></a></li>
+     <li><a href="/daps" title="daps"><span>Data &amp; Products</span></a></li>
+     <li><a href="/paws" title="paws"><span>Projects &amp; Activities</span></a></li>
+     <li><a href="/asmts" title="assesments"><span>Assessments</span></a></li>
+     <li id="nav-1"><t:pagelink page="prop:componentResources.pageName"><u>Partners &amp; Programs</u></t:pagelink></li>
+    </ul>
+    
+
+    <div id = "bodyContainer"> 
+		<div id ="searchContainer">
+		
+		 <form t:type="form" t:id="searchCriteria" action="orgs" method="post">
+		   
+		
+		    <table width="750" style="border-collapse: collapse; border-spacing: 0;">
+		     <tr class="title-blue" border="1">
+		        <td  align="right" width="150">Text Search</td>
+		        <td align="left">
+                   <input t:type="TextField" t:id="searchText" size="50" value="searchText" />
+                   <t:submit t:id="search" value="Go" /><t:submit t:id="clear" value="Clear/Show All" />
+                 </td>
+		      </tr>
+		    </table>
+          </form>  
+		</div><!-- End of "searchContainer" -->
+    
+
+
+ <div id="container3"><!-- Contains the accordion. Allows for padding on the top of the accordion to fit and look better on page-->
+  <div id="container2"><!-- This contains the scroll css code. -->
+   <div id="Accordion1" class="Accordion" tabindex="0">
+
+
+   
+     <div class="AccordionPanel" t:type="Loop" t:source="list" t:value="row">
+      <div class="AccordionPanelTab">
+
+       <table class="project-box">
+        <colgroup>
+          <col class="title-blue" />
+        </colgroup>
+        <tr>
+         <td width="67" style="width: 67px">Name</td>
+         <td>${row.name}</td>
+        </tr>
+       </table>
+
+    </div><!-- End Accordion Panel Tab -->
+
+
+    <div class="AccordionPanelContent"><!--added by cameron-->
+
+    <table class="project-box">
+     <colgroup>
+      <col class="title-blue" />
+     </colgroup>
+     
+     <tr>
+      <td>Web</td>
+      <td><a href="${row.url}">${row.url}</a></td>
+     </tr>
+     
+     <tr>
+      <td>Contact</td>
+      <td>${row.contact}</td>
+     </tr>
+     
+     <tr>
+      <td>Logo</td>
+      <td><img src="${context:layout/images}/${row.logo}" /></td>
+     </tr>
+     
+     
+     <tr>
+      <td>Description</td>
+      <td>${row.description}(<t:pagelink page="org/view" context="row.id" target="_blank">More&hellip;</t:pagelink>)</td>
+     </tr>
+     
+
+
+    </table>
+
+        <!-- Column 1 end -->
+    </div><!-- End of AccordionPanelContent -->
+   </div><!-- End of AccordionPanel (both content and tab)  -->
+
+
+   </div><!-- End of Accordion 1 -->
+  </div><!-- End of "container 2" -->
+ </div><!-- End of "container 3" -->
+
+  
+    
+    
+    </div><!--end of bodyContainer-->
+    
+<script type="text/javascript"><!--added by cameron-->
+var Accordion1 = new Spry.Widget.Accordion("Accordion1",{useFixedPanelHeights: false, defaultPanel: -1 });
+</script><!--(works only if loaded at end) -->
+
+</body>
+</html>

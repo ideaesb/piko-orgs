@@ -1,0 +1,100 @@
+<html t:type="lonform" title="Organization"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+      
+<body>
+   <t:form t:id="org" class="appnitro">
+   
+   <div class="form_description">
+     <h2>Pacific Region RCSD Lead Agency, Partners &amp; Programs Worksheet</h2>
+     <p>Use this form to add or update an Organization record into Piko (Worsheet June 2012)</p>
+   </div>		
+   
+   <t:errors/>
+   
+   <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('ppBox');" title="Show or Hide">Partner and/or Program</legend>
+       <div id="ppBox" class="unhidden">
+        <t:checkbox t:id="agency" t:value="org.agency" class="element checkbox" /><t:label for="agency" class="choice"/>
+        <t:checkbox t:id="pmops" t:value="org.pmops" class="element checkbox" /><t:label for="pmops" class="choice"/>
+       </div>
+       
+      </fieldset>
+     </li>
+   
+
+   <ul>
+   
+     <li id="li_code">
+      <t:label class="description" for="code" />
+      <t:textField t:id="code" t:validate="maxlength=255" size="15" value="org.code" />
+     </li>
+     
+     <li id="li_name">
+      <t:label class="description" for="name" />
+      <div>
+       <t:textArea t:id="name" t:validate="maxlength=1024" rows="3" cols="90" value="org.name" />
+      </div>
+     </li>
+
+
+     <li id="li_contact">
+      <t:label class="description" for="contact" />
+      <div>
+       <t:textArea t:id="contact" t:validate="maxlength=2048" rows="2" cols="90" value="org.contact" />
+      </div>
+     </li>
+
+
+	<li id="li_description">
+	<t:label class="description" for="description" />
+	<t:textArea t:id="description" t:validate="maxlength=4096" rows="3" cols="90" value="org.description" />
+	</li>
+
+  	<li id="li_url">
+	<t:label class="description" for="url" />
+	<t:textArea t:id="url" t:validate="maxlength=255" rows="3" cols="90" value="org.url" />
+	</li>
+	<li id="li_logo">
+	<t:label class="description" for="logo" />
+	<t:textArea t:id="logo" t:validate="maxlength=255" rows="3" cols="90" value="org.logo" />
+	</li>
+	<li id="li_worksheet">
+	<t:label class="description" for="worksheet" />
+	<t:textArea t:id="worksheet" t:validate="maxlength=255" rows="3" cols="90" value="org.worksheet" />
+	</li>
+	<li id="li_keywords">
+	<t:label class="description" for="keywords" />
+	<t:textArea t:id="keywords" t:validate="maxlength=4096" rows="3" cols="90" value="org.keywords" />
+	</li>
+
+     <li>     
+     <fieldset>
+
+      <legend class="description" onclick="javascript:hideToggle('catBox');" title="Show or Hide">Category or Type</legend>
+       <div id="catBox" class="unhidden">
+		
+        <t:checkbox t:id="federal" t:value="org.federal" class="element checkbox" /><t:label for="federal" class="choice" />
+        <t:checkbox t:id="state" t:value="org.state" class="element checkbox" /><t:label for="state" class="choice" />
+        <t:checkbox t:id="local" t:value="org.local" class="element checkbox" /><t:label for="local" class="choice" />
+        <t:checkbox t:id="interagency" t:value="org.interagency" class="element checkbox" /><t:label for="interagency" class="choice" />
+        <t:checkbox t:id="academic" t:value="org.academic" class="element checkbox" /><t:label for="academic" class="choice" />
+        <t:checkbox t:id="ngo" t:value="org.ngo" class="element checkbox" /><t:label for="ngo" class="choice" />
+        <t:checkbox t:id="otherPartnerType" t:value="org.otherPartnerType" class="element checkbox" /><t:label for="otherPartnerType" class="choice" />
+		
+       </div>
+       
+      </fieldset>
+     </li>
+
+
+		
+
+
+   </ul>
+  </t:form>	
+    
+ </body>
+</html>
