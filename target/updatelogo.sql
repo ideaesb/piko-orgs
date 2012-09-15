@@ -96,6 +96,8 @@ update org set logo='image063.jpg' where logo='image063.gif';
 update org set logo='image064.jpg' where logo='image064.gif';
 update org set logo='image065.jpg' where logo='image065.gif';
 update org set logo='wb.jpg' where logo='WorldBank.PNG';
+update org set logo='adb.jpg' where logo='ADB.PNG';
+update org set logo='image026.gif' where logo='image024.gif';
 
 
 

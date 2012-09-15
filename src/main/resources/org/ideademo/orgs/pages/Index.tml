@@ -63,7 +63,7 @@
      
      <tr>
       <td>Web</td>
-      <td><a href="${row.url}">${row.url}</a></td>
+      <td><a href="${row.url}" target="_blank">${row.url}</a></td>
      </tr>
      
      <tr>
