@@ -103,8 +103,20 @@ public class Org implements Comparable<Org>
 		this.contact = contact;
 	}
 
-	public String getUrl() {
-		return url;
+	public String getUrl() 
+	{
+		if (url == null || url.trim().length() == 0)
+		{
+			return "";
+		}
+	    else if (url.startsWith("http"))
+		{
+		  return url;
+		}
+	    else
+	    {
+	    	return "http://" + url;
+	    }
 	}
 
 	public void setUrl(String url) {
