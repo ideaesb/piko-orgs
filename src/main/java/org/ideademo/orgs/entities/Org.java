@@ -109,7 +109,7 @@ public class Org implements Comparable<Org>
 		{
 			return "";
 		}
-	    else if (url.startsWith("http"))
+		 else if (url.toLowerCase().startsWith("http"))
 		{
 		  return url;
 		}
