@@ -4,7 +4,7 @@
  
 <body>
     <ul id="nav">
-     <li><a href="../index.php"><span>Home</span></a></li>
+     <li><a href="${message:HOMEPAGE}"><span>Home</span></a></li>
      <li><a href="/daps" title="daps"><span>Data &amp; Products</span></a></li>
      <li><a href="/pawz" title="paws"><span>Projects &amp; Activities</span></a></li>
      <li><a href="/asmts" title="assesments"><span>Assessments</span></a></li>
@@ -24,6 +24,7 @@
 		        <td align="left">
                    <input t:type="TextField" t:id="searchText" size="50" value="searchText" />
                    <t:submit t:id="search" value="Go" /><t:submit t:id="clear" value="Clear/Show All" />
+                   <t:submit t:id="pdf" name="PDF" value="PDF" />
                  </td>
 		      </tr>
 		    </table>
@@ -79,7 +80,10 @@
      
      <tr>
       <td>Description</td>
-      <td>${row.description}(<t:pagelink page="org/view" context="row.id" target="_blank">More&hellip;</t:pagelink>)</td>
+      <td>${row.description}(<t:pagelink page="org/view" context="row.id" target="_blank">More&hellip;</t:pagelink>)
+                       <!--      (<t:pagelink page="org/pdf" context="row.id" target="_blank">PDF&hellip;</t:pagelink>) -->
+                            (<a t:type="eventlink" t:event="returnstreamresponse" context="row.id" href="#">PDF</a>)            
+      </td>
      </tr>
      
 

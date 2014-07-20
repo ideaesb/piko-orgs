@@ -90,7 +90,7 @@
      </li>
 
 
-		
+	<t:submit t:id="pdf" name="Run Report" value="PDF" />	
 
 
    </ul>
