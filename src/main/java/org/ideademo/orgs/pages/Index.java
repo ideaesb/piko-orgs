@@ -67,7 +67,7 @@ public class Index
   
   /////////////////////////////
   //  Drives QBE Search
-  @Persist (PersistenceConstants.FLASH)
+  @Persist
   private Org example;
   
   
@@ -79,7 +79,7 @@ public class Index
 
     
   @Property
-  @Persist (PersistenceConstants.FLASH)
+  @Persist
   private String searchText;
 
   @Inject
@@ -89,10 +89,10 @@ public class Index
   private HibernateSessionManager sessionManager;
 
   @Property 
-  @Persist (PersistenceConstants.FLASH)
+  @Persist
   int retrieved; 
   @Property 
-  @Persist (PersistenceConstants.FLASH)
+  @Persist
   int total;
   
   @Inject
